@@ -2,13 +2,23 @@
 name = "simple-bidder"
 version = "0.1.0"
 description = ""
-authors = ["Your Name <you@example.com>"]
+authors = ["Alexandra Back <alexandra1.back@gmail.com>"]
 readme = "README.md"
 packages = [{include = "simple_bidder"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
+pydantic = "^1.10.4"
+ulid-py = "^1.1.0"
+fastapi = "^0.89.1"
 
+
+[tool.poetry.group.dev.dependencies]
+uvicorn = "^0.20.0"
+
+
+[tool.poetry.group.test.dependencies]
+pytest = "^7.2.1"
 
 [build-system]
 requires = ["poetry-core"]
