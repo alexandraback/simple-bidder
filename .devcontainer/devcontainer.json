@@ -14,9 +14,12 @@
 			"extensions": [
 				"ms-python.black-formatter",
 				"ms-python.python",
-				"bierner.markdown-mermaid"
+				"bierner.markdown-mermaid",
+				"sdras.night-owl"
 			],
 			"settings": {
+				"workbench.colorTheme": "Night Owl (No Italics)",
+				"python.terminal.activateEnvironment": false,
 				"[python]": {
 					"editor.tabSize": 4,
 					"editor.formatOnSave": true,
@@ -33,11 +36,15 @@
 	"forwardPorts": [8000],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "poetry install"
+	"postCreateCommand": "poetry install",
 
 	// Configure tool-specific properties.
 	// "customizations": {},
 
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"
+
+	"remoteEnv": {
+		"PATH": "${containerEnv:PATH}:/home/vscode/.local/bin"
+	}
 }
