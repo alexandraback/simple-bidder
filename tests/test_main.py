@@ -1,4 +1,4 @@
-from simple_bidder.models.campaign import CampaignResponse
+from simple_bidder.models.response import CampaignResponse
 
 
 def test_campaign_with_id():

@@ -1,0 +1,22 @@
+[
+    {
+      "name": "Ping new campaign",
+      "keywords": [
+        "super lord",
+        "programming"
+      ],
+      "budget": 100,
+      "id": "01GQZHX1DDT4SC7MBB58SD5G98",
+      "spending": 0
+    },
+    {
+      "name": "Alex campaign",
+      "keywords": [
+        "goat programmer",
+        "programming"
+      ],
+      "budget": 100,
+      "id": "01GQZHXEXJH5VY3N7X2MBHZ3CF",
+      "spending": 0
+    }
+  ]
