@@ -1,6 +1,8 @@
 from pydantic import BaseModel, validator
 import ulid
 
+from simple_bidder.models.bid import Bid
+
 
 class Campaign(BaseModel):
     name: str
@@ -11,13 +13,8 @@ class Campaign(BaseModel):
     # class Config:
     #     underscore_attrs_are_private = True
 
-
-class CampaignResponse(Campaign):
-    id: str = None
-    spending: int = 0
-
-    @validator("id", always=True)
-    def create_id(v: str | None):
-        if v is not None:
-            return v
-        return ulid.new().str
+    def is_matching(self, bid_keywords: list[str]) -> bool:
+        for keyword in bid_keywords:
+            if keyword in self.keywords:
+                return True
+        return False
